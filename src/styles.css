@@ -1,1 +1,21 @@
-/* You can add global styles to this file, and also import other style files */
+html{
+    height:100%;
+    background:linear-gradient(to top right, purple, darkblue);
+}
+
+body{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+#title{
+    font-family: Arial, Helvetica, sans-serif;
+    color:antiquewhite;
+    font-size: 48px;
+}
+
+#main{
+    padding:10px;
+    background:linear-gradient(to top right, orangered, orange);
+    border-radius: 5px;
+}
