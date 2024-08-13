@@ -1,5 +1,8 @@
 <main>
-    <app-home></app-home>
+    <h1><a [routerLink]="['/']" id="title">IRL TASK MANAGER</a></h1>
+    <section class="content">
+        <router-outlet></router-outlet>
+    </section>
 </main>
 
 <router-outlet />

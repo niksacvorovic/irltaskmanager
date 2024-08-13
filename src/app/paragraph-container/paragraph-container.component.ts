@@ -1,11 +1,12 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ParagraphText } from '../paragraphtext';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-paragraph-container',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   templateUrl: './paragraph-container.component.html',
   styleUrl: './paragraph-container.component.css'
 })

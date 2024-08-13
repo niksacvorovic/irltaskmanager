@@ -14,3 +14,24 @@ h2{
 p{
     font-size: 12px;
 }
+
+a, a:hover{
+    font-size:12px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a{
+    color:antiquewhite;
+}
+
+a:hover{
+    color:purple;
+}
+
+div{
+    margin-bottom: 5px;
+    padding:10px;
+    background:linear-gradient(to top right, orangered, orange);
+    border-radius: 5px;
+}

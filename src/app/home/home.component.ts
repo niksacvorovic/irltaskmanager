@@ -3,29 +3,19 @@ import { CommonModule } from '@angular/common';
 import { ParagraphContainerComponent } from '../paragraph-container/paragraph-container.component';
 import { ParagraphText } from '../paragraphtext';
 import { DataService } from '../data.service';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, ParagraphContainerComponent],
+  imports: [CommonModule, ParagraphContainerComponent, RouterModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
-  newtextlist:ParagraphText[] = [
-    {
-      title: "Novi naslov",
-      text: "Novi sadržaj",
-    },
-    {
-      title: "Noviji naslov",
-      text: "Noviji sadržaj"
-    }
-  ];
+  newtextlist:ParagraphText[] = [];
   gettext:DataService = inject(DataService);
-  /*constructor() {
-    this.gettext.getAllTasks()
-    .then(data => data.json())
-    .then(json => this.newtextlist = json.data)
-  }*/
+  constructor() {
+    this.newtextlist = this.gettext.getAllTasks();
+  }
 }

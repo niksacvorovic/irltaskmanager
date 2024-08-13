@@ -1,0 +1,24 @@
+{
+    "data":[
+        {
+            "title":"Novi naslov",
+            "text":"Novi naslov",
+            "id":0
+        },
+        {
+            "title":"Noviji naslov",
+            "text":"Noviji naslov",
+            "id":1
+        },
+        {
+            "title":"Najnoviji naslov",
+            "text":"Najnoviji naslov",
+            "id":2
+        }
+    ],
+    "details":[
+        "Novi detalji o zadatku",
+        "Noviji detalji o zadatku",
+        "Najnoviji detalji o zadatku"
+    ]
+}

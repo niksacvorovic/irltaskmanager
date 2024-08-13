@@ -1,2 +1,5 @@
-<h2>{{ data.title }}</h2>
-<p>{{ data.text }}</p>
+<div>
+    <h2>{{ data.title }}</h2>
+    <p>{{ data.text }}</p>
+    <a [routerLink]="['/details', data.id]">Detalji</a>
+</div>

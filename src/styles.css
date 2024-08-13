@@ -13,9 +13,3 @@ body{
     color:antiquewhite;
     font-size: 48px;
 }
-
-#main{
-    padding:10px;
-    background:linear-gradient(to top right, orangered, orange);
-    border-radius: 5px;
-}
