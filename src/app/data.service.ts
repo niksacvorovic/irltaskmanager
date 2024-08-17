@@ -28,4 +28,7 @@ export class DataService {
     .then(arr => arr[index]);
   }
   
+  createNewTask() {
+
+  }
 }
