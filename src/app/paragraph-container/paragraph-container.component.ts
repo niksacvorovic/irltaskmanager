@@ -1,6 +1,5 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ParagraphText } from '../paragraphtext';
 import { RouterModule } from '@angular/router';
 
 @Component({
@@ -11,5 +10,6 @@ import { RouterModule } from '@angular/router';
   styleUrl: './paragraph-container.component.css'
 })
 export class ParagraphContainerComponent {
-  @Input() data!:ParagraphText;
+  @Input() data!:any;
+  @Input() id!:any;
 }

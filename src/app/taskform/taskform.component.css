@@ -1,0 +1,15 @@
+mat-label, mat-hint{
+    color:antiquewhite;
+}
+
+mat-form-field{
+    width:100%;
+}
+
+input[matInput], textarea[matInput]{
+    color:antiquewhite !important
+}
+
+textarea{
+    min-height:200px
+}

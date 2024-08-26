@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { ParagraphText } from './paragraphtext';
 
 @Injectable({
   providedIn: 'root'
@@ -10,25 +9,19 @@ export class DataService {
 
   getAllTasks() {
     const url = "https://irltaskmanager-db-default-rtdb.firebaseio.com/data.json";
-    let dataArray:ParagraphText[] = [];
-    const data = fetch(url)
-    .then(response => response.json())
-    .then(data => {
-      for(var i in data){
-        dataArray.push(data[i] as ParagraphText)
-      }
-    });
-    return dataArray;
+    return fetch(url)
+    .then(response => response.json());
   }
 
-  getTaskDetails(index:number) {
-    const url = "https://irltaskmanager-db-default-rtdb.firebaseio.com/details.json"
+  getTaskDetails(index:string) {
+    const url = "https://irltaskmanager-db-default-rtdb.firebaseio.com/data.json"
     return fetch(url)
     .then(response => response.json())
     .then(arr => arr[index]);
   }
   
-  createNewTask() {
-
+  async createNewTask(arg1:string, arg2:string, arg3:string) {
+    const url = "https://irltaskmanager-db-default-rtdb.firebaseio.com/data.json";
+    const response = await fetch(url, {method:"POST", body: JSON.stringify({title:arg1, text:arg2, details:arg3})});
   }
 }

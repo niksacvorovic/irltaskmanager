@@ -16,7 +16,7 @@ export class DetailsComponent{
   getdetails:DataService = inject(DataService);
   details:string = "";
   constructor() {
-    this.getdetails.getTaskDetails(Number(this.route.snapshot.params['id']))
-    .then(retval => {this.details = retval});
+    this.getdetails.getTaskDetails(this.route.snapshot.params['id'])
+    .then(retval => {this.details = retval.details});
   }
 }

@@ -3,22 +3,17 @@
         {
             "title":"Novi naslov",
             "text":"Novi naslov",
-            "id":0
+            "details":"Novi detalji o zadatku"
         },
         {
             "title":"Noviji naslov",
             "text":"Noviji naslov",
-            "id":1
+            "details":"Noviji detalji o zadatku"
         },
         {
             "title":"Najnoviji naslov",
             "text":"Najnoviji naslov",
-            "id":2
+            "details":"Najnoviji detalji o zadatku"
         }
-    ],
-    "details":[
-        "Novi detalji o zadatku",
-        "Noviji detalji o zadatku",
-        "Najnoviji detalji o zadatku"
     ]
 }
