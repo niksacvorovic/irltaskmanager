@@ -3,17 +3,20 @@
         {
             "title":"Novi naslov",
             "text":"Novi naslov",
-            "details":"Novi detalji o zadatku"
+            "details":"Novi detalji o zadatku",
+            "pending":true
         },
         {
             "title":"Noviji naslov",
             "text":"Noviji naslov",
-            "details":"Noviji detalji o zadatku"
+            "details":"Noviji detalji o zadatku",
+            "pending":true
         },
         {
             "title":"Najnoviji naslov",
             "text":"Najnoviji naslov",
-            "details":"Najnoviji detalji o zadatku"
+            "details":"Najnoviji detalji o zadatku",
+            "pending":true
         }
     ]
 }

@@ -5,6 +5,9 @@
 
 div{
     padding:10%;
+    margin-bottom: 5px;
+    padding:10px;
+    border-radius: 10px;
 }
 
 h2{
@@ -29,9 +32,37 @@ a:hover{
     color:purple;
 }
 
-div{
+.pending{
+    background:linear-gradient(to top right, orangered, orange);
+}
+
+.finished{
+    background:linear-gradient(to top right, green, darkgreen);
+}
+
+.finished h2, .finished p{
+    color:antiquewhite
+}
+
+.finished a:hover{
+    color:orange
+}
+
+button{
+    float:right;
+    font-weight: bold;
     margin-bottom: 5px;
     padding:10px;
-    background:linear-gradient(to top right, orangered, orange);
-    border-radius: 5px;
+    background:linear-gradient(to top right, purple, darkblue);
+    border-radius: 10px;
+    border:0px;
+    color:antiquewhite;
+}
+
+button:hover{
+    color:orangered;
+}
+
+button:focus{
+    background:linear-gradient(to top right, darkblue, purple);
 }

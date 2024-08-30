@@ -4,24 +4,24 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class DataService {
+  
+  url = "https://irltaskmanager-db-default-rtdb.firebaseio.com/data.json";
 
   constructor() { }
 
   getAllTasks() {
-    const url = "https://irltaskmanager-db-default-rtdb.firebaseio.com/data.json";
-    return fetch(url)
+    return fetch(this.url)
     .then(response => response.json());
   }
 
   getTaskDetails(index:string) {
-    const url = "https://irltaskmanager-db-default-rtdb.firebaseio.com/data.json"
-    return fetch(url)
+    return fetch(this.url)
     .then(response => response.json())
     .then(arr => arr[index]);
   }
   
   async createNewTask(arg1:string, arg2:string, arg3:string) {
     const url = "https://irltaskmanager-db-default-rtdb.firebaseio.com/data.json";
-    const response = await fetch(url, {method:"POST", body: JSON.stringify({title:arg1, text:arg2, details:arg3})});
+    const response = await fetch(this.url, {method:"POST", body: JSON.stringify({title:arg1, text:arg2, details:arg3, pending:true})});
   }
 }

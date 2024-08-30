@@ -14,7 +14,17 @@ import { RouterModule } from '@angular/router';
 export class HomeComponent {
   dataObject:any = null;
   gettext:DataService = inject(DataService);
+  switch:boolean = false;
+  buttonText:string = "Prikažite sve zadatke";
   constructor() {
     this.gettext.getAllTasks().then(data => this.dataObject = data);
+  }
+  toggle() {
+    this.switch = !this.switch;
+    if (this.switch){
+      this.buttonText = "Sakrijte urađene zadatke";
+    }else{
+      this.buttonText = "Prikažite sve zadatke";
+    }
   }
 }

@@ -12,4 +12,11 @@ import { RouterModule } from '@angular/router';
 export class ParagraphContainerComponent {
   @Input() data!:any;
   @Input() id!:any;
+  @Input() showall!:boolean;
+  async finish(id:string) {
+    const url = "https://irltaskmanager-db-default-rtdb.firebaseio.com/data/"
+    await fetch(url + id + ".json", {method:"PUT", body:JSON.stringify({title:this.data.title, text:this.data.text, details:this.data.details, pending:false})});
+    this.data.pending = false;
+  }
+
 }

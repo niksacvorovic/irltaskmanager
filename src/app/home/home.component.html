@@ -1,4 +1,5 @@
 <div>
     <a [routerLink]="['/newtask']">Dodajte novi zadatak</a>
 </div>
-<app-paragraph-container *ngFor="let newtext of dataObject | keyvalue" [data]="newtext.value" [id]="newtext.key"></app-paragraph-container>
+<button (click)="toggle()">{{ buttonText }}</button>
+<app-paragraph-container *ngFor="let newtext of dataObject | keyvalue" [data]="newtext.value" [id]="newtext.key" [showall]="switch"></app-paragraph-container>

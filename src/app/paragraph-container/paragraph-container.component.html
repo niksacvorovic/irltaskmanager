@@ -1,5 +1,6 @@
-<div>
+<div *ngIf="data.pending || showall" [class.pending]="data.pending" [class.finished]="!data.pending"> 
     <h2>{{ data.title }}</h2>
+    <button class="finish" (click)="finish(id)" *ngIf="data.pending">Završite zadatak</button>
     <p>{{ data.text }}</p>
-    <a [routerLink]="['/details', id]">Detalji</a>
+    <a [routerLink]="['/details', id]">Detalji</a><br/>
 </div>
